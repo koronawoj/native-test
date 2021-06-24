@@ -7,24 +7,29 @@
 import * as Linking from 'expo-linking';
 
 export default {
-  prefixes: [Linking.makeUrl('/')],
-  config: {
-    screens: {
-      Root: {
+    prefixes: [Linking.makeUrl('/')],
+    config: {
         screens: {
-          TabOne: {
-            screens: {
-              TabOneScreen: 'one',
+            Root: {
+                screens: {
+                    TabOne: {
+                        screens: {
+                            TabOneScreen: 'one',
+                        },
+                    },
+                    TabTwo: {
+                        screens: {
+                            TabTwoScreen: 'two',
+                        },
+                    },
+                    HomePage: {
+                        screens: {
+                            HomePageScreen: 'homepage',
+                        },
+                    },
+                },
             },
-          },
-          TabTwo: {
-            screens: {
-              TabTwoScreen: 'two',
-            },
-          },
+            NotFound: '*',
         },
-      },
-      NotFound: '*',
     },
-  },
 };
